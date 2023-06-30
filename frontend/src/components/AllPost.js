@@ -13,7 +13,7 @@ const AllPost = () => {
         setAllContent(response.data.likes);
       })
       .catch((error) => {
-        alert(error);
+        // alert(error);
       });
   };
 
@@ -31,7 +31,7 @@ const AllPost = () => {
         getAllContent();
       })
       .catch((error) => {
-        alert(error);
+        // alert(error);
       });
   };
 

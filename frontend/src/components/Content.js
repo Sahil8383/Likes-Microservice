@@ -17,7 +17,7 @@ const Content = () => {
         console.log(response.data.likes);
       })
       .catch((error) => {
-        alert(error);
+        
       });
   };
 
@@ -43,7 +43,6 @@ const Content = () => {
         }, 3000);
       })
       .catch((error) => {
-        alert(error);
       });
   };
 
