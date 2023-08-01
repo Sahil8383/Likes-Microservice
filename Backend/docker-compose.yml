@@ -6,8 +6,8 @@ services:
       dockerfile: dockerfile
     ports:
       - 3000:3000
-    depends_on:
-      - mongodb
+    environment:
+      - MONOG_URL="mongodb+srv://sahil:sahilbhatt@testing.jcn48rr.mongodb.net/?retryWrites=true&w=majority"
 
   react-app:
     build:
@@ -15,16 +15,6 @@ services:
       dockerfile: dockerfile
     ports:
       - 80:80
-    depends_on:
-      - mongodb
-
-  mongodb:
-    image: mongo:latest
-    ports:
-      - 27017:27017
-    volumes:
-      - mongodb_data:/data/db
 
 volumes:
   mongodb_data:
-
